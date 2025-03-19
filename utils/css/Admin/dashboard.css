@@ -1,0 +1,271 @@
+﻿body {
+    margin: 0;
+    padding:0;
+    background-color:#f1f1f2;
+}
+
+#content{
+    width:100%;
+    height: 100vh;
+}
+
+#navbar {
+    background-color: #060A1C;
+    width: 180px;
+}
+
+
+#mainContentContainer {
+    width: calc(100% - 180px);
+    height: 100%;
+}
+
+#mainContent{
+    padding: 50px;
+}
+
+#graphContainer {
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    width:45%;
+/*    height: 100%;*/
+}
+
+#cost, #profit {
+    width: 400px;
+    text-align: center;
+    background-color: #060A1C;
+    border-radius:10px;
+    padding: 10px 0;
+}
+
+#dataContainer{
+    width: 50%;
+}
+
+.dataValue, .dataTitle{
+    font-size: 16px;
+    margin: 0;
+}
+
+.dataTitle{
+    color: #f1f1f2;
+    font-weight: 500;
+}
+
+.dataValue {
+    color: #FEB216;
+}
+
+/* #itemsContainer {
+    width: 850px;
+    height: 230px;
+    background-color: #060A1C;
+    margin-top: 50px;
+} */
+
+.itemsContainer{
+    margin-top: 50px;
+}
+
+.itemsContainer .itemTitle{
+    font-size: 24px;
+    font-weight: 500;
+    margin:0;
+}
+
+#items {
+    width: 100%;
+    max-width: 850px;
+    background-color: #060A1C;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.item p{
+    margin: 0;
+}
+
+.item {
+    width: 15%;
+    margin-right: 50px;
+}
+
+.item:nth-child(4), .item:last-child{
+    margin-right: 0px;
+}
+
+p.itemName {
+    color: #f1f1f2;
+    font-size: 16px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    max-width: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 20px;
+}
+
+.itemAmount {
+    color: #FEB216;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+thead {
+    background-color: #060A1C;
+    color: #FEB216;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+thead th:first-child{
+    border-top-left-radius: 10px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+tbody td {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+tbody tr{
+    height: 80px;
+}
+
+tbody tr:hover{
+    background-color: #D9D9D9;
+    color: #000000;
+    transition: 0.3s;
+}
+
+
+#mobilenavBar{
+    background-color: #060A1C;
+    padding: 20px;
+    position:fixed;
+    top:0;
+    display: none !important;
+}
+
+#mobilenavBar :is(img, svg){
+    width: 70px;
+    height: 70px;
+}
+
+#mobilenavBar  #right svg{
+    margin-top:0 !important;
+    margin-right: 20px;
+}
+
+#mobilenavBar  #right svg:last-child{
+    margin-right: 0;
+}
+
+#mobileformContainer{
+    text-align: center;
+    display: none;
+}
+
+/* @media only screen and (max-width: 1300px){
+    #above{
+        flex-direction: column;
+    }
+
+    #graphContainer{
+        width: 100%;
+        height: 200px;
+    }
+
+    #dataContainer{
+        width: 100%;
+    }
+} */
+
+@media only screen and (max-width: 1150px){
+    .item {
+        width: 35%;
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .dataValue, .dataTitle{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #navbar{
+        display: none;
+    }
+    #mobilenavBar{
+        display: flex !important;
+    }
+
+    #mainContentContainer{
+        height: calc(100% - 100px);
+        margin-top: 100px;
+    }
+
+    #mainContentContainer, #mainContent{
+        width: 100%;
+    }
+
+    #above{
+        flex-direction: column;
+    }
+
+    #graphContainer{
+        width: 100%;
+        height: 200px;
+    }
+
+    #dataContainer{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .dataValue, .dataTitle{
+        font-size: 16px;
+    }
+
+    .item {
+        width: 20%;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    thead{
+        font-size: 16px;
+    }
+
+    tbody td{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:530px){
+    #mobilenavBar :is(img, svg){
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .item {
+        width: 35%;
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .dataValue, .dataTitle, .item :is(.itemName, .itemAmount), thead{
+        font-size: 12px;
+    }
+
+    tbody td{
+        font-size: 8px;
+    }
+}

@@ -1,0 +1,258 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f2;
+}
+*{
+    box-sizing: border-box;
+}
+
+#content {
+    height: 100vh;
+}
+
+#navbar {
+    background-color: #060A1C;
+    width:180px;
+    position:fixed;
+    left: 0;
+    top: 0;
+}
+
+#mainContentContainer{
+    width: calc(100% - 180px);
+    margin-left: 180px;
+}
+
+#mainContent {
+    padding: 50px;
+}
+
+#mainContent h1{
+    font-size: 48px;
+}
+
+#productContainer, #inventoryContainer {
+    width: 45%;
+    height:100%;
+}
+
+.titleContainer button{
+    width: 45%;
+    max-width: 200px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight:500;
+    border: 1px black solid;
+}
+
+#inventoryBtn {
+    background-color: #060A1C;
+    color: #FEB216;
+    border:none;
+}
+
+#inventoryBtn:hover, #productBtn:hover{
+    transition: .2s linear;
+}
+
+#productBtn:hover {
+    background-color: #060A1C;
+    color: #FEB216;
+    border: none;
+}
+
+#inventoryBtn:hover{
+    background-color: #f1f1f2;
+    color: #060A1C;
+    border: 1px black solid;
+}
+
+.titleContainer p, .item p {
+    margin: 0;
+    font-size: 24px;
+}
+
+.itemsContainer {
+    box-shadow: 0 1px 50px 1px rgba(0,0,0,0.2);
+    height: 630px;
+    border-radius: 20px;
+    overflow-y:auto
+}
+
+.itemsContainer::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 10px;
+}
+
+.itemsContainer::-webkit-scrollbar-thumb, .itemsContainer::-webkit-scrollbar-track {
+    border-radius: 20px;
+}
+
+.itemsContainer::-webkit-scrollbar-thumb {
+    background-color: #060A1C;
+}
+
+.item{
+    height: 150px;
+}
+
+.itemTitle {
+    font-weight: 700;
+}
+
+.itemImg {
+    width: 100px;
+    height: 100px;
+    background-color: #060A1C;
+    border-radius: 10px;
+}
+
+
+#mobilenavBar{
+    background-color: #060A1C;
+    padding: 20px;
+    position:fixed;
+    top:0;
+    display: none !important;
+}
+
+#mobilenavBar :is(img, svg){
+    width: 70px;
+    height: 70px;
+}
+
+#mobilenavBar  #right svg{
+    margin-top:0 !important;
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 1350px){
+    .itemImg{
+        width: 80px;
+        height: 80px;
+    }
+    
+    .item p{
+        font-size: 12px;
+    }
+
+
+    .item svg{
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
+@media only screen and (max-width: 1030px){
+    #productInventoryContainer{
+        flex-direction: column;
+    }
+
+    .itemImg{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .item p{
+        font-size: 16px;
+    }
+
+
+    .item svg{
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    #productContainer, #inventoryContainer{
+        width: 100%;
+    }
+
+    #inventoryContainer{
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #navbar{
+        display: none;
+    }
+    #mobilenavBar{
+        display: flex !important;
+    }
+
+    #mainContentContainer{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 100px;
+    }
+
+    #mainContent h1{
+        font-size: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 530px){
+    #mobilenavBar :is(img, svg){
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    .itemImg{
+        width: 80px;
+        height: 80px;
+    }
+    
+    .item p{
+        font-size: 12px;
+    }
+
+
+    .item svg{
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    #mainContent h1{
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .itemImg{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .item p{
+        font-size: 8px;
+    }
+
+
+    .item svg{
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    #mainContent h1{
+        font-size:24px;
+    }
+
+    .titleContainer p{
+        font-size: 20px;
+    }
+    .item{
+        padding: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .item{
+        padding: 10px !important;
+    }
+    /* .itemImg{
+        width: 30px;
+        height: 30px;
+    } */
+}

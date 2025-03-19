@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f2;
+}
+
+#navBar {
+    background-color: #060A1C;
+    height: 100px;
+    position: fixed;
+    top:0;
+}
+
+#navBar img{
+    width: 80px;
+}
+
+#navBar a{
+    color: #f1f1f2;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration:none;
+}
+#navBar a:first-child{
+    color: #FEB216;
+}
+
+#contentContainer{
+    margin-top: 130px;
+}
+
+.content{
+    width: 90%;
+}
+
+#productReceiptContainer > div{
+    width: 45%;
+    height: 800px;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+}
+
+#productContainer{
+    overflow-y: auto;
+    padding: 30px;
+}
+
+#productContainer::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 10px;
+}
+
+#productContainer::-webkit-scrollbar-thumb, #productContainer::-webkit-scrollbar-track {
+    border-radius: 20px;
+}
+
+#productContainer::-webkit-scrollbar-thumb {
+    background-color: #060A1C;
+}
+
+.product{
+    width: 30%;
+    min-width: 100px;
+    /* height:180px; */
+    margin-top: 20px;
+    background-color:#060A1C;
+    color:#FEB216;
+    border:none;
+    border-radius:5px;
+    font-size: 20px;
+    font-weight: 700;   
+}
+
+#ReceiptContainer{
+    padding: 30px;
+}
+
+#ReceiptContainer :is(table, #tableFooter){
+    width:100%;
+    height: 10%;
+    text-align: center;
+}
+
+#ReceiptContainer #tableHeader thead{
+    border-bottom: 2px solid black;
+}
+
+#ReceiptContainer #tableBody{
+    height: 80%;
+}
+
+#ReceiptContainer #tableBody{
+    overflow-y: auto;
+}
+
+#tableBody::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 10px;
+}
+
+#tableBody::-webkit-scrollbar-thumb, #tableBody::-webkit-scrollbar-track {
+    border-radius: 20px;
+}
+
+#tableBody::-webkit-scrollbar-thumb {
+    background-color: #060A1C;
+}
+
+#ReceiptContainer :is(td, th){
+    width:100px;
+}
+
+#ReceiptContainer #tableBody td{
+    height:100px;
+    font-weight: 500;
+}
+
+#ReceiptContainer #tableFooter {
+    border-top:2px solid black;
+}
+
+#ReceiptContainer #tableFooter p{
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 900px){
+    .product{
+        min-width:45%; 
+    }
+}
+
+@media only screen and (max-width: 780px){
+    #productReceiptContainer{
+        flex-direction: column;
+    }
+
+    #productReceiptContainer > div{
+        width: 100%
+    }
+
+    #ReceiptContainer{
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    #productContainer, #ReceiptContainer{
+        padding: 20px;
+    }
+    
+    .product{
+        font-size: 12px;
+    }
+
+    #tableHeader th, #tableFooter p{
+        font-size: 12px;
+    }
+
+    #tableBody tr{
+        text-overflow: ellipsis;
+        max-width: 60px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    #ReceiptContainer #tableBody td{
+        font-size: 10px;
+    }
+}
