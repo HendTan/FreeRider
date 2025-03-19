@@ -147,7 +147,11 @@ body {
     }
 }
 
-
+@media only screen and (max-width: 410px){
+    #navBar a{
+        font-size: 12px;
+    }
+}
 
 @media only screen and (max-width: 350px){
     #productContainer, #ReceiptContainer{
