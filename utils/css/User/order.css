@@ -145,11 +145,15 @@ body {
     #navBar a{
         font-size: 16px;
     }
+    
 }
 
 @media only screen and (max-width: 410px){
     #navBar a{
         font-size: 12px;
+    }
+    #navBar a{
+        margin-right: 20px;
     }
 }
 
