@@ -4,6 +4,10 @@
     background-color: #f1f1f2;
 }
 
+a{
+    text-decoration: none;
+}
+
 #content{
     display:flex;
     width: 100%;

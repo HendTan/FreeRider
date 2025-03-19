@@ -14,6 +14,10 @@
     width: 180px;
 }
 
+#above svg.dashboard path{
+    color:#FEB216
+}
+
 
 #mainContentContainer {
     width: calc(100% - 180px);
@@ -156,7 +160,7 @@ tbody tr:hover{
     height: 70px;
 }
 
-#mobilenavBar  #right svg{
+#mobilenavBar  #right :is(svg, a){
     margin-top:0 !important;
     margin-right: 20px;
 }

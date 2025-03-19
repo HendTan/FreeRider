@@ -37,13 +37,18 @@
     height:100%;
 }
 
-.titleContainer button{
+.titleContainer :is(button, a){
     width: 45%;
     max-width: 200px;
     font-size: 20px;
     border-radius: 10px;
     font-weight:500;
     border: 1px black solid;
+}
+
+#productBtn{
+    width: 100%;
+    border:none;
 }
 
 #inventoryBtn {
@@ -122,7 +127,7 @@
     height: 70px;
 }
 
-#mobilenavBar  #right svg{
+#mobilenavBar  #right :is(svg, a){
     margin-top:0 !important;
     margin-right: 20px;
 }

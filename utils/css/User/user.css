@@ -52,8 +52,12 @@
     margin-top: 20px;
 }
 
-.table{
+.tables a{
     width: 75%;
+} 
+
+.table{
+    width: 100%;
     height: 100px;
     background-color: #060A1C;
     color: #FEB216;

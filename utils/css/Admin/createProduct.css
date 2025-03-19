@@ -135,7 +135,7 @@
     height: 70px;
 }
 
-#mobilenavBar  #right svg{
+#mobilenavBar  #right :is(svg, a){
     margin-top:0 !important;
     margin-right: 20px;
 }
